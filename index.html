@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminary Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seminary Attendance</h1>
+
+        <form id="attendanceForm">
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lesson">Lesson:</label>
+                <input type="text" id="lesson" placeholder="Enter lesson" required>
+            </div>
+
+            <h2>Students</h2>
+            <div id="students">
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Athena Brielle Owayas">
+                        Athena Brielle Owayas
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Auxerre Vouge Francisco">
+                        Auxerre Vouge Francisco
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Christine Baclaan">
+                        Christine Baclaan
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Dale Morin">
+                        Dale Morin
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Danielle Morin">
+                        Danielle Morin
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Gary Manolong">
+                        Gary Manolong
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Jeraldine Uban">
+                        Jeraldine Uban
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Joseph Eli Baclaan">
+                        Joseph Eli Baclaan
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Joseph Levi Baclaan">
+                        Joseph Levi Baclaan
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Keisha Lou Sabejon">
+                        Keisha Lou Sabejon
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Kiyou Largo">
+                        Kiyou Largo
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Mary Rose Madrazo">
+                        Mary Rose Madrazo
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Micheal Mabala">
+                        Micheal Mabala
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Pauline Dawn Bolongan">
+                        Pauline Dawn Bolongan
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Ralph Daquipil">
+                        Ralph Daquipil
+                    </label>
+                </div>
+                <div class="student">
+                    <label>
+                        <input type="checkbox" name="student" value="Steven Jan Molo">
+                        Steven Jan Molo
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="newStudent">Add a Student Not in the List:</label>
+                <input type="text" id="newStudent" placeholder="Enter student name">
+                <button type="button" onclick="addStudent()">Add Student</button>
+            </div>
+
+            <button type="submit">Submit Attendance</button>
+        </form>
+
+        <h2>Submitted Information</h2>
+        <textarea id="submittedInfo" rows="10" readonly></textarea>
+        <button onclick="copyInfo()">Copy Information</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
