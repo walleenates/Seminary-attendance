@@ -33,23 +33,26 @@ document.getElementById('attendanceForm').addEventListener('submit', function(ev
     
     let studentNames = [];
     students.forEach(student => {
-        studentNames.push(student.value);
+        studentNames.push(`<li>${student.value}</li>`);
     });
 
     const formattedDate = formatDate(date);
 
     const submittedInfo = `
-Date: ${formattedDate}
-Lesson: ${lesson}
-Attendance: ${studentNames.join(', ')}
+Date: ${formattedDate}<br>
+Lesson: ${lesson}<br>
+Attendance: <ul>${studentNames.join('')}</ul>
     `;
 
-    document.getElementById('submittedInfo').value = submittedInfo;
+    document.getElementById('submittedInfo').innerHTML = submittedInfo;
 });
 
 function copyInfo() {
     const submittedInfo = document.getElementById('submittedInfo');
-    submittedInfo.select();
+    const range = document.createRange();
+    range.selectNode(submittedInfo);
+    window.getSelection().removeAllRanges(); // Clear any previous selections
+    window.getSelection().addRange(range);
     document.execCommand('copy');
     alert('Attendance information copied!');
 }
